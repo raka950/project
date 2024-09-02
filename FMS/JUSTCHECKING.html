@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notices</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .scroll-box {
+            width: 80%;
+            height: 300px;
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            margin: 20px auto;
+        }
+        table {
+            width: 100%;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+    <script>
+        function autoScroll() {
+            const box = document.querySelector('.scroll-box');
+            box.scrollTop = box.scrollHeight;
+            setInterval(() => {
+                box.scrollTop -= 1;
+                if (box.scrollTop === 0) {
+                    box.scrollTop = box.scrollHeight;
+                }
+            }, 50);
+        }
+        window.onload = autoScroll;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Notices</h1>
+        <div class="scroll-box">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Serial No</th>
+                        <th>Date</th>
+                        <th>Name</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2024-07-08</td>
+                        <td>Notice 1</td>
+                        <td><a href="https://example.com/notice1.pdf" target="_blank">Click Here</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>2024-07-09</td>
+                        <td>Notice 2</td>
+                        <td><a href="https://example.com/notice2.pdf" target="_blank">Click Here</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>2024-07-10</td>
+                        <td>Notice 3</td>
+                        <td><a href="https://example.com/notice3.pdf" target="_blank">Click Here</a></td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

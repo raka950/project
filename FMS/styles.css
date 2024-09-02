@@ -1,0 +1,297 @@
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #fff 0%, #fff 100%);
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 98%; /* Full width for the header */
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000000;
+    border-bottom: 1px solid #7aafe9;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.login-button {
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    align-items: center; /* Center vertically */
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #0026ff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden; /* Prevent horizontal scrolling */
+    height: 100vh;
+    position: relative;
+}
+
+.main-content {
+    margin-top: 300px; /* Same as the height of the header */
+    margin-left: 200px; /* Same as the width of the sidebar */
+    margin-right: 20px; /* Add right margin for spacing */
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1; /* Take remaining space in the flex container */
+    overflow-x: auto;
+    white-space: nowrap;
+    height: calc(100vh - 60px);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar {
+        position: fixed;
+        top: 60px; /* Start from the bottom of the header */
+        left: 0;
+        width: 200px; /* Adjust the width as needed */
+        height: calc(100% - 60px); /* Extend to the bottom of the page */
+        background-color: #3f27ca; /* Blue background color */
+        color: #fff; /* White text color */
+        padding: 10px;
+        box-sizing: border-box;
+        overflow-y: auto; /* Allow vertical scrolling */
+        overflow-x: hidden;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 5px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #ffffff; /* White text color */
+    display: block;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #ffffff; /* White background color on hover */
+    color: #3f27ca; /* Blue text color on hover */
+}
+
+.add-category {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.add-category button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.add-category span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.content {
+    flex: 1;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #000000; /* Ensuring text color is black */
+}
+
+.content #addCategoryForm {
+    display: none;
+    text-align: center;
+}
+
+.content input {
+    padding: 10px;
+    margin: 10px;
+    width: 100%; /* Ensure input fields take the full width */
+    max-width: 300px; /* Set maximum width for search content */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.content .submit-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px; /* Add margin-top to ensure the button is below the input */
+}
+
+.content .submit-button:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+
+.container {
+    max-width: 600px; /* Set a smaller maximum width */
+    margin: 0 auto; /* Center the container */
+    padding: 10px; /* Add some padding */
+    box-sizing: border-box; /* Include padding in the width */
+}
+
+h1 {
+    font-size: 1rem; /* Smaller font size for heading */
+    margin-bottom: 10px;
+    text-align: center; /* Center the heading */
+}
+
+button {
+    padding: 3px 6px; 
+    margin: 2px; 
+    cursor: pointer; 
+    font-size: 10px; 
+}
+
+button:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+table {
+    width: 100%; /* Ensure table takes the full width */
+    border-collapse: collapse; 
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ccc; 
+}
+
+th, td {
+    padding: 3px 5px; 
+    text-align: left; }
+
+td input {
+    width: 100%; /* Ensure input fields take the full width of the cell */
+    box-sizing: border-box; /* Include padding in the width */
+    font-size: 10px; /* Smaller font size for input fields */
+}
+
+.action-buttons {
+    display: flex; /* Flexbox for action buttons */
+    justify-content: space-between;
+    gap: 3px; /* Space between buttons */
+}
+
+a {
+    color: #007BFF; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+.add-category {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.add-category button {
+    background-color: #102a46;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.add-category span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content #addCategoryForm {
+    display: none;
+    text-align: center;
+}
+
+.add-category input {
+    padding: 10px;
+    margin: 10px auto; /* Center the input field horizontally */
+    width: 100%; /* Full width */
+    max-width: 300px; /* Set a maximum width */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.add-category .submit-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block; /* Ensure the button is displayed as a block element */
+    margin: 10px auto 0; /* Center the button horizontally */
+    text-align: center; /* Center the text inside the button */
+    font-size: 16px; /* Ensure the font size is readable */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center the button horizontally */
+}
+
+.add-category .submit-button:hover {
+    background-color: #45a049;
+}
